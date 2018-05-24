@@ -6,6 +6,9 @@
                     <div class="panel-heading">Timeline</div>
 
                     <div class="panel-body">
+                      
+                      <post-tweet></post-tweet>
+
                       <div class="media" v-for="tweet in tweets">
                         <div class="media-left">
                           <a href="#">
@@ -26,7 +29,13 @@
 </template>
 
 <script>
+    import PostTweet from './PostTweet'
+
     export default {
+        components: [
+          PostTweet
+        ],
+
         data () {
           return {
             tweets: []

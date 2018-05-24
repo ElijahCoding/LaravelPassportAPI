@@ -6,9 +6,10 @@
                     <div class="panel-heading">Timeline</div>
 
                     <div class="panel-body">
-                      
-                      <post-tweet></post-tweet>
 
+                      <post-tweet :tweets="tweets"></post-tweet>
+                      <hr>
+                      
                       <div class="media" v-for="tweet in tweets">
                         <div class="media-left">
                           <a href="#">

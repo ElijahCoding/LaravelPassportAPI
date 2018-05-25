@@ -18,3 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::group(['middleware' => ['auth']], function() {
+  Route::get('/auth/twitter', 'TwitterAuthController@redirect');
+  Route::get('/auth/twitter/callback', 'TwitterAuthController@callback');
+});
